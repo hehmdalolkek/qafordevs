@@ -12,7 +12,7 @@ public interface DeveloperService {
 
     DeveloperEntity saveDeveloper(DeveloperEntity developer);
 
-    void updateDeveloper(DeveloperEntity developer);
+    DeveloperEntity updateDeveloper(DeveloperEntity developer);
 
     List<DeveloperEntity> findAllDevelopers();
 

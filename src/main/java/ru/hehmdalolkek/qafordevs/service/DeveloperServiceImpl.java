@@ -42,10 +42,10 @@ public class DeveloperServiceImpl implements DeveloperService {
     }
 
     @Override
-    public void updateDeveloper(DeveloperEntity developer) {
+    public DeveloperEntity updateDeveloper(DeveloperEntity developer) {
         this.developerRepository.findById(developer.getId())
                 .orElseThrow(() -> new DeveloperNotFoundException("Developer not found"));
-        this.developerRepository.save(developer);
+        return this.developerRepository.save(developer);
     }
 
     @Override
